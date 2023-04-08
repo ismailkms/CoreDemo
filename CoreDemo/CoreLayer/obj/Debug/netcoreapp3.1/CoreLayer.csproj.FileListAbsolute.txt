@@ -1,0 +1,9 @@
+C:\Users\lenovopc\source\repos\CoreDemo\CoreLayer\bin\Debug\netcoreapp3.1\CoreLayer.deps.json
+C:\Users\lenovopc\source\repos\CoreDemo\CoreLayer\bin\Debug\netcoreapp3.1\CoreLayer.dll
+C:\Users\lenovopc\source\repos\CoreDemo\CoreLayer\bin\Debug\netcoreapp3.1\CoreLayer.pdb
+C:\Users\lenovopc\source\repos\CoreDemo\CoreLayer\obj\Debug\netcoreapp3.1\CoreLayer.csprojAssemblyReference.cache
+C:\Users\lenovopc\source\repos\CoreDemo\CoreLayer\obj\Debug\netcoreapp3.1\CoreLayer.AssemblyInfoInputs.cache
+C:\Users\lenovopc\source\repos\CoreDemo\CoreLayer\obj\Debug\netcoreapp3.1\CoreLayer.AssemblyInfo.cs
+C:\Users\lenovopc\source\repos\CoreDemo\CoreLayer\obj\Debug\netcoreapp3.1\CoreLayer.csproj.CoreCompileInputs.cache
+C:\Users\lenovopc\source\repos\CoreDemo\CoreLayer\obj\Debug\netcoreapp3.1\CoreLayer.dll
+C:\Users\lenovopc\source\repos\CoreDemo\CoreLayer\obj\Debug\netcoreapp3.1\CoreLayer.pdb
