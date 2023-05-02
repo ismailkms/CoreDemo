@@ -1,4 +1,6 @@
 ﻿
+@model UserSignInViewModel
+
 @{
     ViewData["Title"] = "Index";
     Layout = "~/Views/Shared/UserLayout.cshtml";
@@ -11,19 +13,15 @@
             <div class="login p-5 bg-light mx-auto mw-100">
                 <form method="post">
                     <div class="form-group">
-                        <label for="exampleInputEmail1 mb-2">Mail Adresi</label>
-                        <input type="email" class="form-control" name="Mail" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="" required="">
+                        <label for="exampleInputEmail1 mb-2">Kullanıcı Adınız</label>
+                        <input type="text" class="form-control" asp-for="@Model.username" id="exampleInputEmail1"  placeholder="" required="">
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputPassword1 mb-2">Şifre</label>
-                        <input type="password" class="form-control" name="Password" id="exampleInputPassword1" placeholder="" required="">
-                    </div>
-                    <div class="form-check mb-2">
-                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                        <label class="form-check-label" for="exampleCheck1">Beni hatırla</label>
+                        <label for="exampleInputPassword1 mb-2">Şifreniz</label>
+                        <input type="password" class="form-control" asp-for="@Model.password" id="exampleInputPassword1" placeholder="" required="">
                     </div>
                     <button type="submit" class="btn btn-primary submit mb-4">Giriş Yap</button>
-                    <p><a href="/Register/Index/">Bir hesabın yok mu?</a></p>
+                    <p><a href="/RegisterUser/Index/">Bir hesabın yok mu?</a></p>
                 </form>
             </div>
         </div>

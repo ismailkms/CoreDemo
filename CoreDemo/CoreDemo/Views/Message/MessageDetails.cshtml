@@ -1,0 +1,20 @@
+﻿
+@model EntityLayer.Concrete.Message2
+
+@{
+    ViewData["Title"] = "MessageDetails";
+    Layout = "~/Views/Shared/WriterLayout.cshtml";
+}
+
+<h1>Mesaj Detay Sayfası</h1>
+<br />
+@Html.Label("Mesaj ID")
+<p>@Model.ID</p>
+<br />
+@Html.Label("Mesaj Başlığı")
+<p>@Model.Subject</p>
+<br />
+@Html.Label("Mesaj İçeriği")
+<p>@Model.Details</p>
+<br />
+<a href="/Message/InBox/" class="btn btn-info">Mesajlara Dön</a>

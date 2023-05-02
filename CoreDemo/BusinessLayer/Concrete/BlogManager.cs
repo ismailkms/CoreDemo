@@ -44,12 +44,12 @@ namespace BusinessLayer.Concrete
 
         public List<Blog> GetLast3Blog()
         {
-            return _blogDal.GetListAll().OrderByDescending(x=>x.ID).Take(3).ToList();
+            return _blogDal.GetListAll().Where(y => y.Status == true).OrderByDescending(x=>x.ID).Take(3).ToList();
         }
 
         public List<Blog> GetBlogListByWriter(int id)
         {
-            return _blogDal.GetListAll(x => x.WriterID == id);
+            return _blogDal.GetListAll(x => x.AppUserId == id);
         }
 
         public void TAdd(Blog t)

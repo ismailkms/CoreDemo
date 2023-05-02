@@ -10,13 +10,32 @@
             </div>
             <div class="col-lg-4 footer-grid-agileits-w3ls text-left">
 
-                @await Component.InvokeAsync("BlogLast3Post") 
+                @await Component.InvokeAsync("BlogLast3Post")
 
             </div>
             <!-- subscribe -->
             <div class="col-lg-4 subscribe-main footer-grid-agileits-w3ls text-left">
-                <h2>Mail Bültenine Abone Olun</h2>
-                @await Html.PartialAsync("~/Views/NewsLetter/SubscribeMail.cshtml")
+                <h2>İletişim</h2>
+                <ul style="list-style: none;color:#777777">
+                    <li class="mx-1 mb-2">
+                        <div class="facebook">
+                            <i class="fas fa-map" style="color:white"></i>
+                            <span class="pl-1">İstanbul, Türkiye</span>
+                        </div>
+                    </li>
+                    <li class="mx-1 mb-2">
+                        <div class="facebook">
+                            <i class="fas fa-envelope" style="color:white"></i>
+                            <span class="pl-1">blog@example.com</span>
+                        </div>
+                    </li>
+                    <li class="mx-1 mb-2">
+                        <div class="facebook">
+                            <i class="fas fa-mobile-alt" style="color:white"></i>
+                            <span class="pl-1">+90 234 567 8901</span>
+                        </div>
+                    </li>
+                </ul>
                 <!-- //subscribe -->
             </div>
         </div>
@@ -39,14 +58,14 @@
                         </li>
                         <li class="mx-3">
                             <a class="facebook" href="#">
-                                <i class="fab fa-google-plus-g"></i>
-                                <span>Google+</span>
+                                <i class="fab fa-linkedin"></i>
+                                <span>LinkedIn</span>
                             </a>
                         </li>
                         <li>
                             <a class="facebook" href="#">
-                                <i class="fab fa-pinterest-p"></i>
-                                <span>Pinterest</span>
+                                <i class="fab fa-instagram"></i>
+                                <span>Instagram</span>
                             </a>
                         </li>
                     </ul>
@@ -55,8 +74,7 @@
             </div>
             <div class="w3layouts-agile-copyrightbottom">
                 <p>
-                    © @DateTime.Now.Year Aps.Net Core. Tüm Hakları Saklıdır | Design by
-                    <a href="http://w3layouts.com/">W3layouts</a>
+                    © @DateTime.Now.Year Aps.Net Core | Tüm Hakları Saklıdır
                 </p>
 
             </div>

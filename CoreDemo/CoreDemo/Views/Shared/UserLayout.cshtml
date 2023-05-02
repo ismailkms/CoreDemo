@@ -7,20 +7,20 @@
 <html lang="zxx">
 
 <head>
-    <title>Blog</title>
+    <title>Core Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <meta name="keywords" content="Weblog a Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
 Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
-
+    <link rel="shortcut icon" href="~/CoreBlogTema/images/homelogo.png" />
     <script>
-		addEventListener("load", function () {
-			setTimeout(hideURLbar, 0);
-		}, false);
+        addEventListener("load", function () {
+            setTimeout(hideURLbar, 0);
+        }, false);
 
-		function hideURLbar() {
-			window.scrollTo(0, 1);
-		}
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
     </script>
     <link href="~/CoreBlogTema/css/bootstrap.css" rel='stylesheet' type='text/css' />
     <link rel="stylesheet" href="~/CoreBlogTema/css/single.css">
@@ -38,41 +38,13 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div class="top-bar_sub_w3layouts container-fluid">
             <div class="row">
                 <div class="col-md-4 logo text-left">
-                    <a class="navbar-brand" href="/Writer/Index/">
-                        <i class="fab fa-linode"></i> BLOG
+                    <a class="navbar-brand" href="/Blog/Index/">
+                        <img src="~/CoreBlogTema/images/homelogo.png" />
                     </a>
                 </div>
 
                 @await Html.PartialAsync("Partial2") 
 
-                <div class="col-md-4 log-icons text-right">
-
-                    <ul class="social_list1 mt-3">
-
-                        <li>
-                            <a href="#" class="facebook1 mx-2">
-                                <i class="fab fa-facebook-f"></i>
-
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="twitter2">
-                                <i class="fab fa-twitter"></i>
-
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="dribble3 mx-2">
-                                <i class="fab fa-dribbble"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#" class="pin">
-                                <i class="fab fa-pinterest-p"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
             </div>
         </div>
 

@@ -30,7 +30,7 @@ namespace CoreDemo.Controllers
             {
                 writer.Status = true;
                 writer.About = "Deneme Test";
-                wm.WriterAdd(writer);
+                wm.TAdd(writer);
                 return RedirectToAction("Index", "Blog");
             }
             else

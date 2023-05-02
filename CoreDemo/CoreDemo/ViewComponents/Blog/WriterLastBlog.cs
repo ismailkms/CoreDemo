@@ -12,9 +12,10 @@ namespace CoreDemo.ViewComponents.Blog
     {
         BlogManager bm = new BlogManager(new EfBlogRepository());
 
-        public IViewComponentResult Invoke()
+        public IViewComponentResult Invoke(int id)
         {
-            var values = bm.GetBlogListByWriter(1);
+            var userId = bm.GetBlogById(id).Where(y => y.Status == true).Select(x => x.AppUserId).FirstOrDefault();
+            var values = bm.GetBlogListByWriter(userId);
             return View(values);
         }
     }

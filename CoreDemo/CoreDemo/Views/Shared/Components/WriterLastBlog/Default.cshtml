@@ -1,6 +1,5 @@
 ﻿
-@using EntityLayer.Concrete
-@model List<Blog>
+@model IEnumerable<EntityLayer.Concrete.Blog>
 
 <div class="tech-btm">
     <h4>Yazarın Diğer Yazıları</h4>
@@ -8,14 +7,14 @@
     {
         <div class="blog-grids row mb-3">
             <div class="col-md-5 blog-grid-left">
-                <a href="single.html">
+                <a href="/Blog/BlogReadAll/@item.ID">
                     <img src="@item.Image" class="img-fluid" alt="">
                 </a>
             </div>
             <div class="col-md-7 blog-grid-right">
 
                 <h5>
-                    <a href="single.html">@item.Title</a>
+                    <a href="/Blog/BlogReadAll/@item.ID">@item.Title</a>
                 </h5>
                 <div class="sub-meta">
                     <span>

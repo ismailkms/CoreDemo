@@ -1,0 +1,21 @@
+﻿
+@model EntityLayer.Concrete.Message2
+
+@{
+    ViewData["Title"] = "SenderMessageDetails";
+    Layout = "~/Views/Shared/AdminLayout.cshtml";
+}
+
+<h1>Mesaj Detay Sayfası</h1>
+<br />
+@Html.Label("Mesaj ID")
+<p>@Model.ID</p>
+<br />
+@Html.Label("Mesaj Başlığı")
+<p>@Model.Subject</p>
+<br />
+@Html.Label("Mesaj İçeriği")
+<p>@Model.Details</p>
+<br />
+<a href="/Admin/AdminMessage/SendBox/" class="btn btn-info">Mesajlara Dön</a>
+

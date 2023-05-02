@@ -1,5 +1,6 @@
 ﻿using BusinessLayer.Concrete;
 using BusinessLayer.ValidationRules;
+using DataAccessLayer.Concrete;
 using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
 using FluentValidation.Results;
@@ -13,17 +14,20 @@ using System.Threading.Tasks;
 
 namespace CoreDemo.Controllers
 {
-    [AllowAnonymous]
     public class BlogController : Controller
     {
         BlogManager bm = new BlogManager(new EfBlogRepository());
         CategoryManager cm = new CategoryManager(new EfCategoryRepository());
+        Context c = new Context();
+
+        [AllowAnonymous]
         public IActionResult Index()
         {
             var values = bm.GetBlogListWithCategory();
             return View(values);
         }
 
+        [AllowAnonymous]
         public IActionResult BlogReadAll(int id)
         {
             ViewBag.i = id;
@@ -33,7 +37,10 @@ namespace CoreDemo.Controllers
 
         public IActionResult BlogListByWriter()
         {
-            var values = bm.GetListCategoryByWriterBm(1);
+            //Giriş yapan kullanıcı mailini çekiyor
+            var userName = User.Identity.Name;
+            var userId = c.Users.Where(x => x.UserName == userName).Select(y => y.Id).FirstOrDefault();
+            var values = bm.GetListCategoryByWriterBm(userId);
             return View(values);
         }
 
@@ -63,13 +70,17 @@ namespace CoreDemo.Controllers
                                                    }).ToList();
             ViewBag.cv = categoryvalues;
 
+            var userName = User.Identity.Name;
+            var userId = c.Users.Where(x => x.UserName == userName).Select(y => y.Id).FirstOrDefault();
+
             BlogValidator bv = new BlogValidator();
             ValidationResult results = bv.Validate(p);
             if (results.IsValid)
             {
                 p.Status = true;
                 p.CreateDate = DateTime.Parse(DateTime.Now.ToShortDateString());
-                p.WriterID = 1;
+                p.AppUserId = userId;
+                p.Image = "/CoreBlogTema/images/default.png";
                 bm.TAdd(p);
                 return RedirectToAction("BlogListByWriter", "Blog");
             }

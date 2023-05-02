@@ -1,0 +1,21 @@
+﻿
+@{
+    Layout = null;
+}
+
+<div class="comment-top">
+    <h4>Bir Yorum Yapın</h4>
+    <div class="comment-bottom">
+        <form method="post">
+
+            <input type="hidden" id="txtblogid3" name="BlogID" value="@ViewBag.id" />
+            <input class="form-control" type="text" id="txtusername3" name="UserName" placeholder="Adınız Soyadınız" required="">
+            <input class="form-control" type="text" id="txttitle3" name="Title" placeholder="Konu" required="">
+            <textarea class="form-control" id="txtcontent3" name="Content" placeholder="Yorumunuz..." required=""></textarea>
+
+            <button type="submit" id="btnaddcomment" class="btn btn-primary submit">Yorum Yap</button>
+        </form>
+    </div>
+</div>
+<script src="~/js/core.js"></script>
+

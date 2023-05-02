@@ -1,0 +1,53 @@
+﻿
+@model EntityLayer.Concrete.AppUser
+
+@{
+    ViewData["Title"] = "WriterAdd";
+    Layout = "~/Views/Shared/WriterLayout.cshtml";
+}
+
+@* Resim kaydedebilmek için enctype="multipart/form-data" yı ekliyoruz. *@
+<form class="form-group" method="post" enctype="multipart/form-data">
+    <div class="col-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Yazar Ekle</h4>
+                <br />
+                <div class="forms-sample">
+                    <div class="form-group">
+                        <label for="exampleInputName1">Ad Soyad</label>
+                        @Html.TextBoxFor(x => x.NameSurname, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(x => x.NameSurname, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail3">Kullanıcı Adı</label>
+                        @Html.TextBoxFor(x => x.UserName, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(x => x.UserName, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputEmail3">Mail</label>
+                        @Html.TextBoxFor(x => x.Email, new { @class = "form-control" })
+                        @Html.ValidationMessageFor(x => x.Email, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword4">Şifre</label>
+                        @Html.TextBoxFor(x => x.PasswordHash, new { @class = "form-control", @type = "password" })
+                        @Html.ValidationMessageFor(x => x.PasswordHash, "", new { @class = "text-danger" })
+                    </div>
+                    <div class="form-group">
+                        <label>Görsel</label>
+                        <input type="file" name="image" class="form-control" />
+                    </div>
+                    @*<div class="form-group">
+            <label for="exampleTextarea1">Hakkında</label>
+            @Html.TextAreaFor(x => x.About, 15, 3, new { @class = "form-control" })
+            @Html.ValidationMessageFor(x => x.About, "", new { @class = "text-danger" })
+        </div>*@
+                    <button type="submit" class="btn btn-gradient-primary mr-2">Kaydet</button>
+                    <button class="btn btn-light">İptal</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
