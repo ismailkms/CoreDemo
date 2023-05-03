@@ -48,7 +48,7 @@
                         </div>
                         <h4>Mail Bültenine Abone Olun</h4>
 
-                        @await Html.PartialAsync("~/Views/NewsLetter/SubscribeMail.cshtml")
+                        @await Component.InvokeAsync("NewsLetter")
 
                     <div class="tech-btm">
 

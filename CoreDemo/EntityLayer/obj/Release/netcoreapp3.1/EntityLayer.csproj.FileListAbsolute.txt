@@ -1,0 +1,9 @@
+C:\Users\lenovopc\source\repos\CoreDemo\EntityLayer\bin\Release\netcoreapp3.1\EntityLayer.deps.json
+C:\Users\lenovopc\source\repos\CoreDemo\EntityLayer\bin\Release\netcoreapp3.1\EntityLayer.dll
+C:\Users\lenovopc\source\repos\CoreDemo\EntityLayer\bin\Release\netcoreapp3.1\EntityLayer.pdb
+C:\Users\lenovopc\source\repos\CoreDemo\EntityLayer\obj\Release\netcoreapp3.1\EntityLayer.csprojAssemblyReference.cache
+C:\Users\lenovopc\source\repos\CoreDemo\EntityLayer\obj\Release\netcoreapp3.1\EntityLayer.AssemblyInfoInputs.cache
+C:\Users\lenovopc\source\repos\CoreDemo\EntityLayer\obj\Release\netcoreapp3.1\EntityLayer.AssemblyInfo.cs
+C:\Users\lenovopc\source\repos\CoreDemo\EntityLayer\obj\Release\netcoreapp3.1\EntityLayer.csproj.CoreCompileInputs.cache
+C:\Users\lenovopc\source\repos\CoreDemo\EntityLayer\obj\Release\netcoreapp3.1\EntityLayer.dll
+C:\Users\lenovopc\source\repos\CoreDemo\EntityLayer\obj\Release\netcoreapp3.1\EntityLayer.pdb

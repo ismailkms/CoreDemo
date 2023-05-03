@@ -1,0 +1,15 @@
+﻿
+@{
+    Layout = null;
+}
+
+
+<div class="tech-btm">
+    <p>Teknoloji, yazılım ve diğer bloglar...</p>
+    <form method="post" action="/NewsLetter/SubscribeMail/">
+        <input type="hidden" name="blogid" value="@ViewBag.blogid" />
+        <input type="email" id="txtmail" placeholder="Email" name="Mail" required="">
+        <input type="submit" id="btn" value="Abone Ol">
+    </form>
+</div>
+@*<script src="~/js/core.js"></script>*@

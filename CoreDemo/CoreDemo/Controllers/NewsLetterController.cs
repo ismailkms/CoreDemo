@@ -15,18 +15,13 @@ namespace CoreDemo.Controllers
     {
         NewsLetterManager nm = new NewsLetterManager(new EfNewsLetterRepository());
 
-        [HttpGet]
-        public PartialViewResult SubscribeMail()
-        {
-            return PartialView();
-        }
-
         [HttpPost]
-        public IActionResult SubscribeMail(NewsLetter newsLetter)
+        public IActionResult SubscribeMail(NewsLetter newsLetter,int? blogid)
         {
             newsLetter.Status = true;
             nm.AddNewsLetter(newsLetter);
-            return PartialView();
+            
+            return blogid != 0 ? RedirectToAction("BlogReadAll", "Blog", new { id = blogid }) : RedirectToAction("Index", "About");
         }
     }
 }

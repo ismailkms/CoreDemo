@@ -16,7 +16,7 @@
                 <div class="row">
                     @foreach (var item in Model.Where(x=>x.Status == true))
                     {
-                        <div class="col-lg-4 card">
+                        <div class="col-lg-4 card p-2">
                             <a href="/Blog/BlogReadAll/@item.ID/">
                                 <img src="@item.Image" class="card-img-top img-fluid" alt="">
                             </a>

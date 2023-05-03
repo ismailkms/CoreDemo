@@ -64,7 +64,7 @@
                         </div>
                         <h4>Mail Bültenine Abone Olun</h4>
 
-                        @await Html.PartialAsync("~/Views/NewsLetter/SubscribeMail.cshtml")
+                        @await Component.InvokeAsync("NewsLetter", new { id = ViewBag.i })
 
                         @await Component.InvokeAsync("WriterLastBlog", new { id = ViewBag.i })
 

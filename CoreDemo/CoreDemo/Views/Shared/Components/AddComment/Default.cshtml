@@ -6,7 +6,7 @@
 <div class="comment-top">
     <h4>Bir Yorum Yapın</h4>
     <div class="comment-bottom">
-        <form method="post">
+        <form method="post" action="/Comment/AddComment/">
 
             <input type="hidden" id="txtblogid3" name="BlogID" value="@ViewBag.id" />
             <input class="form-control" type="text" id="txtusername3" name="UserName" placeholder="Adınız Soyadınız" required="">
@@ -17,5 +17,5 @@
         </form>
     </div>
 </div>
-<script src="~/js/core.js"></script>
+@*<script src="~/js/core.js"></script>*@
 
